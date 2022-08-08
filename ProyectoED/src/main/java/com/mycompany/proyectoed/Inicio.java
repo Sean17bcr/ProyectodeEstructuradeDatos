@@ -11,6 +11,7 @@ public class Inicio {
         L.extraerDelInicio();
         L.extraerEspecifico();*/
 //comentario
+// com2
         
         byte op = 0;
    
