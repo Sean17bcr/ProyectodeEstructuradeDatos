@@ -111,7 +111,7 @@ public class LESCatalogoClientes {
             }
             JOptionPane.showMessageDialog(null, "La lista contiene:\n" + s);
         } else {
-            JOptionPane.showMessageDialog(null, "La está vacía!");
+            JOptionPane.showMessageDialog(null, "La lista esta completamente vacía!");
         }
     }
 

@@ -2,11 +2,11 @@ package BaseDatos;
 import nodosAutilizar.NodoLESHelado;
 import Informacion.DatoBatido;
 import javax.swing.JOptionPane;
-public class LESbatidos {
+public class LESHelados {
 
     private NodoLESHelado inicio;
 
-    public LESbatidos() {
+    public LESHelados() {
         this.inicio = null;
     }
 
@@ -19,89 +19,90 @@ public class LESbatidos {
     }
 
     public void agregar() {
-        String batido = "";
-        DatoBatido b = new DatoBatido();
+        String helado;
+        helado = "";
+        DatoHelado h = new DatoHelado();
         boolean encontrado = false;
-        batido = (JOptionPane.showInputDialog(null, "Ingrese el ID del batido: "));
+        helado = (JOptionPane.showInputDialog(null, "Ingrese el ID del Helado: "));
             NodoLESHelado aux = inicio;
             while (!encontrado && aux != null) {
-                if (batido.equals(aux.getElemento().getBatido())) {
+                if (helado.equals(aux.getElemento().getHelado())) {
                     encontrado = true;
                 }
                 aux = aux.getSiguiente();
             }
             if (encontrado == false) {
-                b.setBatido(batido);
-                b.setDescripcion(JOptionPane.showInputDialog(null, "Ingrese la descripción del batido: "));
-                b.setIngredientes(JOptionPane.showInputDialog(null, "Ingrese los ingredientes del batido: "));
-                b.setEstado(JOptionPane.showInputDialog(null, "Ingrese el estado del batido: "));
+                h.sethelado(helado);
+                h.setDescripcion(JOptionPane.showInputDialog(null, "Ingrese la descripción del Helado: "));
+                h.setIngredientes(JOptionPane.showInputDialog(null, "Ingrese los ingredientes del Helado: "));
+                h.setEstado(JOptionPane.showInputDialog(null, "Ingrese el estado del Helado: "));
                 NodoLESHelado nuevo = new NodoLESHelado();
                 nuevo.setElemento(b);
                 if (esVaciaLES()) {
                     inicio = nuevo;
-                } else if (b.getBatido().compareTo(inicio.getElemento().getBatido()) < 0) {
+                } else if (b.getHelado().compareTo(inicio.getElemento().getHelado()) < 0) {
                     nuevo.setSiguiente(inicio);
                     inicio = nuevo;
                 } else if (inicio.getSiguiente() == null) {
                     inicio.setSiguiente(nuevo);
                 } else {
                     NodoLESHelado aux2 = inicio;
-                    while ((aux2.getSiguiente() != null) && (b.getBatido().compareTo(aux2.getElemento().getBatido()) >= 0)) {
+                    while ((aux2.getSiguiente() != null) && (b.getHelado().compareTo(aux2.getElemento().getHelado()) >= 0)) {
                         aux2 = aux2.getSiguiente();
                     }
                     nuevo.setSiguiente(aux2.getSiguiente());
                     aux2.setSiguiente(nuevo);
                 }
             } else {
-                JOptionPane.showMessageDialog(null, "Este batido ya se encuentra registrado, por favor ingrese otro ID");
+                JOptionPane.showMessageDialog(null, "Este Helado ya se encuentra registrado, por favor ingrese otro ID");
             }
         }
     
 
     public void editar() {
-        String batido = "";
-        batido = JOptionPane.showInputDialog(null, "Ingrese el batido que desea editar: ");
+        String helado = "";
+        helado = JOptionPane.showInputDialog(null, "Ingrese el Helado que desea editar: ");
         NodoLESHelado aux = inicio;
         boolean encontrado = false;
         if (!esVaciaLES()) {
 
             while (!encontrado && aux != null) {
-                if (batido.equals(aux.getElemento().getBatido())) {
+                if (helado.equals(aux.getElemento().getHelado())) {
                     encontrado = true;
-                    aux.getElemento().setDescripcion(JOptionPane.showInputDialog("Ingrese la nueva descripción para el batido ID: " 
+                    aux.getElemento().setDescripcion(JOptionPane.showInputDialog("Ingrese la nueva descripción para el Helado: " 
                             + aux.getElemento().getBatido()));
-                    aux.getElemento().setIngredientes(JOptionPane.showInputDialog("Ingrese los nuevos ingredientes para el batido ID: " 
+                    aux.getElemento().setIngredientes(JOptionPane.showInputDialog("Ingrese los nuevos ingredientes para el Helado ID: " 
                             + aux.getElemento().getBatido()));
                 }
                 aux = aux.getSiguiente();
             }
             if (encontrado == false) {
-                JOptionPane.showMessageDialog(null, "El batido no se encuentra registrado");
+                JOptionPane.showMessageDialog(null, "El Helado no se encuentra registrado");
             }
         } else {
-            JOptionPane.showMessageDialog(null, "No hay batidos registrados");
+            JOptionPane.showMessageDialog(null, "No hay Helados registrados");
         }
     }
 
     public void inactivar() {
-        String batido = "";
-        batido = JOptionPane.showInputDialog(null, "Ingrese el ID del batido que desea inactivar: ");
+        String helado = "";
+        helado = JOptionPane.showInputDialog(null, "Ingrese el ID del Helado que desea inactivar: ");
         NodoLESHelado aux = inicio;
         boolean encontrado = false;
         if (!esVaciaLES()) {
             while (!encontrado && aux != null) {
-                if (batido.equals(aux.getElemento().getBatido())) {
+                if (helado.equals(aux.getElemento().getHelado())) {
                     encontrado = true;
                     aux.getElemento().setEstado("Inactivo");
-                    JOptionPane.showMessageDialog(null, "Sea ha inactivado el batido");
+                    JOptionPane.showMessageDialog(null, "Sea ha inactivado el Helado");
                 }
                 aux = aux.getSiguiente();
             }
             if (encontrado == false) {
-                JOptionPane.showMessageDialog(null, "El batido no se encuentra registrado");
+                JOptionPane.showMessageDialog(null, "El Helado no se encuentra registrado");
             }
         } else {
-            JOptionPane.showMessageDialog(null, "No hay batidos registrados");
+            JOptionPane.showMessageDialog(null, "No hay Helados registrados");
         }
     }
 
@@ -110,14 +111,14 @@ public class LESbatidos {
             String s = "";
             NodoLESHelado aux = inicio;
             while (aux != null) {
-                s = s+"ID: " + aux.getElemento().getBatido() + "\n" + "Descripción: "
+                s = s+"ID: " + aux.getElemento().getHelado() + "\n" + "Descripción: "
                         +aux.getElemento().getDescripcion() + "\n"+"Ingredientes: " + aux.getElemento().getIngredientes()
                         + "\n"+"Estado: " + aux.getElemento().getEstado();
                 aux = aux.getSiguiente();
             }
             JOptionPane.showMessageDialog(null, "La lista contiene:\n" + s);
         } else {
-            JOptionPane.showMessageDialog(null, "La está vacía!");
+            JOptionPane.showMessageDialog(null, "La lista esta vacía!");
         }
     }
 

@@ -143,7 +143,7 @@ public class LDCingredientes {
             }
             JOptionPane.showMessageDialog(null, "La lista contiene:\n" + s);
         } else {
-            JOptionPane.showMessageDialog(null, "¡No se puede mostrar, lista vacía!");
+            JOptionPane.showMessageDialog(null, "¡No se puede mostrar, lista completamente vacía!");
         }
     }
 }

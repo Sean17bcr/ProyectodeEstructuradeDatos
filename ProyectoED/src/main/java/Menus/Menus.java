@@ -3,7 +3,7 @@ package Menus;
 import BaseDatos.ColaComentarios;
 import BaseDatos.LDCingredientes;
 import BaseDatos.LESCatalogoClientes;
-import BaseDatos.LESbatidos;
+import BaseDatos.LESHelados;
 import BaseDatos.LSCclientes;
 import com.mycompany.proyectoed.Lista;
 import javax.swing.JOptionPane;
@@ -205,7 +205,7 @@ public class Menus {
 
     public void mostrarMenuBatidos() {
 
-        LESbatidos les = new LESbatidos();
+        LESHelados les = new LESHelados();
         opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "***Menú Batidos***\n\n"
                 + "1. Agregar batido\n"
                 + "2. Editar batido\n"
