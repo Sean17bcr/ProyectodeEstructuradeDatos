@@ -76,4 +76,12 @@ public class DatoArbol {
         Cliente = cliente;
     }
 
+    public void setHelado(String showInputDialog) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public String getHelado() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
