@@ -2,15 +2,15 @@ package com.mycompany.proyectoed;
 
 import javax.swing.JOptionPane;
 //
-public class Inicio {
-    public static void main(String[] args) {
-    
-        Lista L = new Lista();
-        
 
-        
+public class Inicio {
+
+    public static void main(String[] args) {
+
+        Lista L = new Lista();
+
         byte op = 0;
-    
+
         String menuPersona = "Opciones a mostrar\n"
                 + "1.Agregar personas\n"
                 + "2.Mostrar a las personas agregadas\n"
@@ -42,15 +42,8 @@ public class Inicio {
 
         } while (op != 5);
 
-        //menu Batidos
-        public static void MenuHelados(){
-            
-        }
-        
-        
-        
-        
-        
     }
 
 }
+
+
