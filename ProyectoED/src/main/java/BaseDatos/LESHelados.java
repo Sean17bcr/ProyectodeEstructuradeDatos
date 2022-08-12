@@ -1,6 +1,6 @@
 package BaseDatos;
 import nodosAutilizar.NodoLESHelado;
-import Informacion.DatoBatido;
+import Informacion.DatoHelado;
 import javax.swing.JOptionPane;
 public class LESHelados {
 
@@ -32,22 +32,22 @@ public class LESHelados {
                 aux = aux.getSiguiente();
             }
             if (encontrado == false) {
-                h.sethelado(helado);
+                h.setHelado(helado);
                 h.setDescripcion(JOptionPane.showInputDialog(null, "Ingrese la descripción del Helado: "));
                 h.setIngredientes(JOptionPane.showInputDialog(null, "Ingrese los ingredientes del Helado: "));
                 h.setEstado(JOptionPane.showInputDialog(null, "Ingrese el estado del Helado: "));
                 NodoLESHelado nuevo = new NodoLESHelado();
-                nuevo.setElemento(b);
+                nuevo.setElemento(h);
                 if (esVaciaLES()) {
                     inicio = nuevo;
-                } else if (b.getHelado().compareTo(inicio.getElemento().getHelado()) < 0) {
+                } else if (h.getHelado().compareTo(inicio.getElemento().getHelado()) < 0) {
                     nuevo.setSiguiente(inicio);
                     inicio = nuevo;
                 } else if (inicio.getSiguiente() == null) {
                     inicio.setSiguiente(nuevo);
                 } else {
                     NodoLESHelado aux2 = inicio;
-                    while ((aux2.getSiguiente() != null) && (b.getHelado().compareTo(aux2.getElemento().getHelado()) >= 0)) {
+                    while ((aux2.getSiguiente() != null) && (h.getHelado().compareTo(aux2.getElemento().getHelado()) >= 0)) {
                         aux2 = aux2.getSiguiente();
                     }
                     nuevo.setSiguiente(aux2.getSiguiente());
@@ -70,9 +70,9 @@ public class LESHelados {
                 if (helado.equals(aux.getElemento().getHelado())) {
                     encontrado = true;
                     aux.getElemento().setDescripcion(JOptionPane.showInputDialog("Ingrese la nueva descripción para el Helado: " 
-                            + aux.getElemento().getBatido()));
+                            + aux.getElemento().getHelado()));
                     aux.getElemento().setIngredientes(JOptionPane.showInputDialog("Ingrese los nuevos ingredientes para el Helado ID: " 
-                            + aux.getElemento().getBatido()));
+                            + aux.getElemento().getHelado()));
                 }
                 aux = aux.getSiguiente();
             }

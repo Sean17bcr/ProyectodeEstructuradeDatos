@@ -1,24 +1,24 @@
 package Informacion;
-public class DatoBatido {
+public class DatoHelado {
 
-    private String batido;
+    private String helado;
     private String descripcion;
     private String ingredientes;
     private String estado;
 
-    public DatoBatido() {
-        this.batido = "";
+    public DatoHelado() {
+        this.helado = "";
         this.descripcion = "";
         this.ingredientes = "";
         this.estado = "";
     }
 
-    public String getBatido() {
-        return batido;
+    public String getHelado() {
+        return helado;
     }
 
-    public void setBatido(String batido) {
-        this.batido = batido;
+    public void setHelado(String batido) {
+        this.helado = batido;
     }
 
     public String getDescripcion() {
@@ -45,8 +45,8 @@ public class DatoBatido {
         this.estado = estado;
     }
 
-    public Object getHelado() {
+    /*public Object getHelado() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    }*/
 
 }

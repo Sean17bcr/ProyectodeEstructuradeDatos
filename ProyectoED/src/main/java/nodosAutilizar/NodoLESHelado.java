@@ -1,19 +1,19 @@
 package nodosAutilizar;
-import Informacion.DatoBatido;
+import Informacion.DatoHelado;
 public class NodoLESHelado {
 
-    private DatoBatido elemento;
+    private DatoHelado elemento;
     private NodoLESHelado siguiente;
 
     public NodoLESHelado() {
         this.siguiente = null;
     }
 
-    public DatoBatido getElemento() {
+    public DatoHelado getElemento() {
         return elemento;
     }
 
-    public void setElemento(DatoBatido elemento) {
+    public void setElemento(DatoHelado elemento) {
         this.elemento = elemento;
     }
 
