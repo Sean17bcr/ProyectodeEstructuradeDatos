@@ -1,11 +1,11 @@
 package nodosAutilizar;
 import Informacion.DatoBatido;
-public class NodoLESBatido {
+public class NodoLESHelado {
 
     private DatoBatido elemento;
-    private NodoLESBatido siguiente;
+    private NodoLESHelado siguiente;
 
-    public NodoLESBatido() {
+    public NodoLESHelado() {
         this.siguiente = null;
     }
 
@@ -17,11 +17,11 @@ public class NodoLESBatido {
         this.elemento = elemento;
     }
 
-    public NodoLESBatido getSiguiente() {
+    public NodoLESHelado getSiguiente() {
         return siguiente;
     }
 
-    public void setSiguiente(NodoLESBatido siguiente) {
+    public void setSiguiente(NodoLESHelado siguiente) {
         this.siguiente = siguiente;
     }
 

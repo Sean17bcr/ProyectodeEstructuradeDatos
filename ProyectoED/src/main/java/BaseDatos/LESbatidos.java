@@ -1,10 +1,10 @@
 package BaseDatos;
-import nodosAutilizar.NodoLESBatido;
+import nodosAutilizar.NodoLESHelado;
 import Informacion.DatoBatido;
 import javax.swing.JOptionPane;
 public class LESbatidos {
 
-    private NodoLESBatido inicio;
+    private NodoLESHelado inicio;
 
     public LESbatidos() {
         this.inicio = null;
@@ -23,7 +23,7 @@ public class LESbatidos {
         DatoBatido b = new DatoBatido();
         boolean encontrado = false;
         batido = (JOptionPane.showInputDialog(null, "Ingrese el ID del batido: "));
-            NodoLESBatido aux = inicio;
+            NodoLESHelado aux = inicio;
             while (!encontrado && aux != null) {
                 if (batido.equals(aux.getElemento().getBatido())) {
                     encontrado = true;
@@ -35,7 +35,7 @@ public class LESbatidos {
                 b.setDescripcion(JOptionPane.showInputDialog(null, "Ingrese la descripción del batido: "));
                 b.setIngredientes(JOptionPane.showInputDialog(null, "Ingrese los ingredientes del batido: "));
                 b.setEstado(JOptionPane.showInputDialog(null, "Ingrese el estado del batido: "));
-                NodoLESBatido nuevo = new NodoLESBatido();
+                NodoLESHelado nuevo = new NodoLESHelado();
                 nuevo.setElemento(b);
                 if (esVaciaLES()) {
                     inicio = nuevo;
@@ -45,7 +45,7 @@ public class LESbatidos {
                 } else if (inicio.getSiguiente() == null) {
                     inicio.setSiguiente(nuevo);
                 } else {
-                    NodoLESBatido aux2 = inicio;
+                    NodoLESHelado aux2 = inicio;
                     while ((aux2.getSiguiente() != null) && (b.getBatido().compareTo(aux2.getElemento().getBatido()) >= 0)) {
                         aux2 = aux2.getSiguiente();
                     }
@@ -61,7 +61,7 @@ public class LESbatidos {
     public void editar() {
         String batido = "";
         batido = JOptionPane.showInputDialog(null, "Ingrese el batido que desea editar: ");
-        NodoLESBatido aux = inicio;
+        NodoLESHelado aux = inicio;
         boolean encontrado = false;
         if (!esVaciaLES()) {
 
@@ -86,7 +86,7 @@ public class LESbatidos {
     public void inactivar() {
         String batido = "";
         batido = JOptionPane.showInputDialog(null, "Ingrese el ID del batido que desea inactivar: ");
-        NodoLESBatido aux = inicio;
+        NodoLESHelado aux = inicio;
         boolean encontrado = false;
         if (!esVaciaLES()) {
             while (!encontrado && aux != null) {
@@ -108,7 +108,7 @@ public class LESbatidos {
     public void mostrarElementos() {
         if (!esVaciaLES()) {
             String s = "";
-            NodoLESBatido aux = inicio;
+            NodoLESHelado aux = inicio;
             while (aux != null) {
                 s = s+"ID: " + aux.getElemento().getBatido() + "\n" + "Descripción: "
                         +aux.getElemento().getDescripcion() + "\n"+"Ingredientes: " + aux.getElemento().getIngredientes()
