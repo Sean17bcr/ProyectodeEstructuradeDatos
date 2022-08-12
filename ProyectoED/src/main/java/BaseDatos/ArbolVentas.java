@@ -5,7 +5,7 @@ import nodosAutilizar.Nodo2Arbol;
 import Informacion.DatoArbol;
 
 /*
-Nombre del batido, fecha, Nombre del cliente
+Nombre del helado, fecha, Nombre del cliente
 cliente es frecuente se le aplicará un 5% de descuento en el total de la compra.
 Mostrar factura por cada compra
 */
@@ -41,7 +41,7 @@ public class ArbolVentas {
         DatoArbol d = new DatoArbol();
         d.setNombre(JOptionPane.showInputDialog("Ingrese su nombre"));
         d.setFecha(JOptionPane.showInputDialog("Ingrese la fecha"));
-        d.setBatido(JOptionPane.showInputDialog("Ingrese el nombre del batido"));
+        d.setHelado(JOptionPane.showInputDialog("Ingrese el nombre del Helado"));
         NodoArbol nuevo = new NodoArbol();
         nuevo.setElemento(d);
         if (esVacio()) {
@@ -72,11 +72,11 @@ public class ArbolVentas {
             DatoArbol d = new DatoArbol();
             d.setNombre(JOptionPane.showInputDialog("Ingrese su nombre"));
             d.setFecha(JOptionPane.showInputDialog("Ingrese la fecha"));
-            d.setBatido(JOptionPane.showInputDialog("Ingrese el batido"));
+            d.setHelado(JOptionPane.showInputDialog("Ingrese el Helado"));
             d.setCliente(JOptionPane.showInputDialog("Ingrese el cliente"));
             modificarNodo(raiz, d);
         } else {
-            System.out.println("El arbol esta vacio");
+            System.out.println("La base de datos se encuentra vacia");
         }
     }
     // modificar los datos del arbol
@@ -84,7 +84,7 @@ public class ArbolVentas {
     public void modificarNodo(NodoArbol raiz, DatoArbol d) {
         if (raiz.getElemento().getNombre().equals(d.getNombre())) {
             raiz.getElemento().setFecha(d.getFecha());
-            raiz.getElemento().setBatido(d.getBatido());
+            raiz.getElemento().setHelado(d.getHelado());
             raiz.getElemento().setCliente(d.getCliente());
         } else {
             if (raiz.getEnlaceIzq() != null) {
@@ -101,7 +101,7 @@ public class ArbolVentas {
         if (!esVacio()) {
             mostrarNodo(raiz);
         } else {
-            System.out.println("El arbol esta vacio");
+            System.out.println("La base de datos se encuentra vacia");
         }
     }
 
@@ -109,11 +109,11 @@ public class ArbolVentas {
         if (raiz != null) {
             mostrarNodo(raiz.getEnlaceIzq());
             JOptionPane.showMessageDialog(null, raiz.getElemento().getNombre() + "\n" + raiz.getElemento().getFecha() + "\n" 
-                    + raiz.getElemento().getBatido() + "\n" + raiz.getElemento().getCliente() + "\n");
+                    + raiz.getElemento().getHelado() + "\n" + raiz.getElemento().getCliente() + "\n");
             
             /*System.out.println(raiz.getElemento().getNombre());
             System.out.println(raiz.getElemento().getFecha());
-            System.out.println(raiz.getElemento().getBatido());
+            System.out.println(raiz.getElemento().getHelado());
             System.out.println(raiz.getElemento().getCliente());*/
             
             mostrarNodo(raiz.getEnlaceDer());
@@ -121,16 +121,16 @@ public class ArbolVentas {
     }
 
     // aqui el metodo lo que hacer es pedir los datos del cliente y luego crear un
-    // nodo, despues hace la operacion matematica por ser cliente frecuente
+    // nodo, luego realiza la operacion matematica por ser un cliente frecuente
     public void crearRaiz2() {
         DatoArbol d = new DatoArbol();
-        d.setNombre(JOptionPane.showInputDialog("Ingrese su nombre"));
-        d.setFecha(JOptionPane.showInputDialog("Ingrese la fecha"));
-        d.setCantidad(Double.parseDouble(JOptionPane.showInputDialog("Ingrese la cantidad")));
-        d.setValor(Double.parseDouble(JOptionPane.showInputDialog("Ingrese el valor")));
+        d.setNombre(JOptionPane.showInputDialog("Ingrese su Nombre"));
+        d.setFecha(JOptionPane.showInputDialog("Ingrese la Fecha"));
+        d.setCantidad(Double.parseDouble(JOptionPane.showInputDialog("Ingrese la Cantidad")));
+        d.setValor(Double.parseDouble(JOptionPane.showInputDialog("Ingrese el Valor")));
         d.setTotal(d.getValor() * d.getCantidad() / 0.05);
-        // mostrar el total de la compra
-        JOptionPane.showMessageDialog(null,"El total de la compra es de: " + d.getTotal());
+        // mostrar el total de la compra realizada 
+        JOptionPane.showMessageDialog(null,"El total de la Compra es de: " + d.getTotal());
         Nodo2Arbol nuevo = new Nodo2Arbol();
         nuevo.setElemento(d);
         if (esVacio2()) {
@@ -160,7 +160,7 @@ public class ArbolVentas {
         if (!esVacio2()) {
             mostrarNodo2(raiz2);
         } else {
-            JOptionPane.showMessageDialog(null,"No se puede mostrar, árbol vacío!");
+            JOptionPane.showMessageDialog(null,"No se puede mostrar, la base de datos se encuentra vacia!");
         }
     }
 
