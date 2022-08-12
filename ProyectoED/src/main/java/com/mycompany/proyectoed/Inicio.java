@@ -6,16 +6,11 @@ public class Inicio {
     public static void main(String[] args) {
     
         Lista L = new Lista();
-        /*L.agregar();
-        L.mostrarElementos();
-        L.extraerDelInicio();
-        L.extraerEspecifico();*/
-//comentario
-// com2  com 3
-//tengo hambre
+        
+
         
         byte op = 0;
-   
+    
         String menuPersona = "Opciones a mostrar\n"
                 + "1.Agregar personas\n"
                 + "2.Mostrar a las personas agregadas\n"
