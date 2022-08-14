@@ -243,4 +243,13 @@ public class Menus {
             }
         }
     }
+    public void mostarMenuCatalogosdeLibros(){
+        modi
+        
+        
+        
+        
+        
+        
+    }
 }
