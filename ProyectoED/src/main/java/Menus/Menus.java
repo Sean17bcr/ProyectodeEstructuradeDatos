@@ -6,6 +6,7 @@ import BaseDatos.LESCatalogoClientes;
 import BaseDatos.LESHelados;
 import BaseDatos.LSCclientes;
 import com.mycompany.proyectoed.Lista;
+import com.mycompany.proyectoed.Modulo2_Catalog;
 import javax.swing.JOptionPane;
 
 /**
@@ -244,7 +245,37 @@ public class Menus {
         }
     }
     public void mostarMenuCatalogosdeLibros(){
-        modi
+     Modulo2_Catalog MC2 = new Modulo2_Catalog();
+     opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "***Menú Librería***\n\n"
+                + "1. Agregar libro\n"
+                + "2. Editar libros\n"
+                + "3. Inactivar libros\n"
+                + "4. Salir del sistema\n"
+                + "Digite su opción:"));
+      switch (opcion) {
+            case 1: {
+                MC2.agregar();
+                mostrarMenuBatidos();
+                break;
+            }
+            case 2: {
+                MC2.Editar();
+                mostrarMenuBatidos();
+                break;
+            }
+            case 3: {
+                MC2.Inactivar();
+                mostrarMenuBatidos();
+                break;
+            }
+            case 4: {
+                break;
+            }
+            default: {
+                JOptionPane.showMessageDialog(null,
+                        "Opción incorrecta!", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
         
         
         
