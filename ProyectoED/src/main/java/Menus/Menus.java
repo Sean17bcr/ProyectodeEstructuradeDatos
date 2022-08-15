@@ -5,6 +5,7 @@ import BaseDatos.LDCingredientes;
 import BaseDatos.LESCatalogoClientes;
 import BaseDatos.LESHelados;
 import BaseDatos.LSCclientes;
+import BaseDatos.LDCcatalogolibros;
 import com.mycompany.proyectoed.Lista;
 import com.mycompany.proyectoed.Modulo2_Catalog;
 import javax.swing.JOptionPane;
@@ -245,7 +246,7 @@ public class Menus {
         }
     }
     public void mostarMenuCatalogosdeLibros(){
-     Modulo2_Catalog MC2 = new Modulo2_Catalog();
+     LDCcatalogolibros MC2 = new LDCcatalogolibros();
      opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "***Menú Librería***\n\n"
                 + "1. Agregar libro\n"
                 + "2. Editar libros\n"
