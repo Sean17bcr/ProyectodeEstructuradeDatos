@@ -245,13 +245,15 @@ public class Menus {
             }
         }
     }
+    
     public void mostarMenuCatalogosdeLibros(){
      LDCcatalogolibros MC2 = new LDCcatalogolibros();
      opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "***Menú Librería***\n\n"
                 + "1. Agregar libro\n"
                 + "2. Editar libros\n"
                 + "3. Inactivar libros\n"
-                + "4. Salir del sistema\n"
+                + "4. Mostrar Libros\n"
+                + "5. Salir del sistema\n"
                 + "Digite su opción:"));
       switch (opcion) {
             case 1: {
@@ -270,6 +272,11 @@ public class Menus {
                 break;
             }
             case 4: {
+                MC2.Mostrar();
+                mostrarMenuBatidos();
+                break;
+            }
+            case 5: {
                 break;
             }
             default: {

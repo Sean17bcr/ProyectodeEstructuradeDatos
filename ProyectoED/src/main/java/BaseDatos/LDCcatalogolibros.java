@@ -890,8 +890,98 @@ public class LDCcatalogolibros {
         } 
     }
     
-    
-    
-    
-    
+    public void Mostrar(){
+        int OpS = Integer.parseInt(JOptionPane.showInputDialog(null,"Indique a que lista desea editar un libro"));
+        
+        if(OpS == 1){
+           if (!esVaciaDC1()) {
+               String s = "";
+               NodoDCLibro1 aux = inicio1;
+               s = s + "El libro con el codigo:" + aux.getElemento1().getLibroID()+ ", Tiene de nombre: " 
+                       + aux.getElemento1().getNombre()
+                       + ", Su fecha de publicación fue:" + aux.getElemento1().getFecha_pub()+ 
+                       ", Tiene un numero de paginas de "+aux.getElemento1().getNum_pag()+"<===>";
+               aux = aux.getSiguiente1();
+               while (aux != inicio1) {
+                   s = s + "El libro con el codigo:" +aux.getElemento1().getLibroID()+ ", Tiene de nombre:" 
+                           + aux.getElemento1().getNombre()
+                           + ", Su fecha de publicación fue:" + aux.getElemento1().getFecha_pub()+ 
+                           ", Tiene un numero de paginas de "+ aux.getElemento1().getNum_pag()+"<===>";
+                   aux = aux.getSiguiente1();
+               }
+               JOptionPane.showMessageDialog(null, "La lista de libros 1 contiene:\n"+ s);
+           } else {
+               JOptionPane.showMessageDialog(null, "La lista 1 de libros está vacía!");
+           } 
+        }else if(OpS ==2){
+            if (!esVaciaDC2()) {
+                String s = "";
+                NodoDCLibro2 aux = inicio2;
+                s = s + "El libro con el codigo:" + aux.getElemento2().getLibroID()+ ", Tiene de nombre: " 
+                        + aux.getElemento2().getNombre()
+                        + ", Su fecha de publicación fue:" + aux.getElemento2().getFecha_pub()+ 
+                        ", Tiene un numero de paginas de "+aux.getElemento2().getNum_pag()+"<===>";
+                aux = aux.getSiguiente2();
+                while (aux != inicio2) {
+                    s = s + "El libro con el codigo:" +aux.getElemento2().getLibroID()+ ", Tiene de nombre:" 
+                            + aux.getElemento2().getNombre()
+                            + ", Su fecha de publicación fue:" + aux.getElemento2().getFecha_pub()+ 
+                            ", Tiene un numero de paginas de "+ aux.getElemento2().getNum_pag()+"<===>";
+                    aux = aux.getSiguiente2();
+                }
+                JOptionPane.showMessageDialog(null, "La lista de libros 2 contiene:\n"+ s);
+            } else {
+                JOptionPane.showMessageDialog(null, "La lista 2 de libros está vacía!");
+            } 
+        }else if(OpS == 3){
+            if (!esVaciaDC3()) {
+                String s = "";
+                NodoDCLibro3 aux = inicio3;
+                s = s + "El libro con el codigo:" + aux.getElemento3().getLibroID()+ ", Tiene de nombre: " 
+                        + aux.getElemento3().getNombre()
+                        + ", Su fecha de publicación fue:" + aux.getElemento3().getFecha_pub()+ 
+                        ", Tiene un numero de paginas de "+aux.getElemento3().getNum_pag()+"<===>";
+                aux = aux.getSiguiente3();
+                while (aux != inicio3) {
+                    s = s + "El libro con el codigo:" +aux.getElemento3().getLibroID()+ ", Tiene de nombre:" 
+                            + aux.getElemento3().getNombre()
+                            + ", Su fecha de publicación fue:" + aux.getElemento3().getFecha_pub()+ 
+                            ", Tiene un numero de paginas de "+ aux.getElemento3().getNum_pag()+"<===>";
+                    aux = aux.getSiguiente3();
+                }
+                JOptionPane.showMessageDialog(null, "La lista de libros 3 contiene:\n"+ s);
+            } else {
+                JOptionPane.showMessageDialog(null, "La lista 3 de libros está vacía!");
+            } 
+            
+        }else if(OpS == 4){
+            if (!esVaciaDC4()) {
+                String s = "";
+                NodoDCLibro4 aux = inicio4;
+                s = s + "El libro con el codigo:" + aux.getElemento4().getLibroID()+ ", Tiene de nombre: " 
+                        + aux.getElemento4().getNombre()
+                        + ", Su fecha de publicación fue:" + aux.getElemento4().getFecha_pub()+ 
+                        ", Tiene un numero de paginas de "+aux.getElemento4().getNum_pag()+"<===>";
+                aux = aux.getSiguiente4();
+                while (aux != inicio4) {
+                    s = s + "El libro con el codigo:" +aux.getElemento4().getLibroID()+ ", Tiene de nombre:" 
+                            + aux.getElemento4().getNombre()
+                            + ", Su fecha de publicación fue:" + aux.getElemento4().getFecha_pub()+ 
+                            ", Tiene un numero de paginas de "+ aux.getElemento4().getNum_pag()+"<===>";
+                    aux = aux.getSiguiente4();
+                }
+                JOptionPane.showMessageDialog(null, "La lista de libros 3 contiene:\n"+ s);
+            } else {
+                JOptionPane.showMessageDialog(null, "La lista 3 de libros está vacía!");
+            } 
+        }
+    }
 }
+        
+        
+        
+    
+    
+    
+    
+
