@@ -3,7 +3,7 @@ package Menus;
 import BaseDatos.ColaComentarios;
 import BaseDatos.LDCingredientes;
 import BaseDatos.LESCatalogoClientes;
-import BaseDatos.LESHelados;
+import BaseDatos.LESbatidos;
 import BaseDatos.LSCclientes;
 import BaseDatos.LDCcatalogolibros;
 import com.mycompany.proyectoed.Lista;
@@ -207,7 +207,7 @@ public class Menus {
 
     public void mostrarMenuBatidos() {
 
-        LESHelados les = new LESHelados();
+        LESbatidos les = new LESbatidos();
         opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "***Menú Batidos***\n\n"
                 + "1. Agregar batido\n"
                 + "2. Editar batido\n"

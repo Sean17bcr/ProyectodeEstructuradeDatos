@@ -24,10 +24,10 @@ public class ColaRegistro {
 
     public void agregar() {
         DatoRegistro d = new DatoRegistro();
-        d.setNombre(JOptionPane.showInputDialog(null, "Ingrese su Nombre:"));
-        d.setApellidos(JOptionPane.showInputDialog(null, "Ingrese sus Apellidos:"));
-        d.setNickname(JOptionPane.showInputDialog(null, "Cree un nombre de Usuario:"));
-        d.setPassword(JOptionPane.showInputDialog(null, "Cree una Contraseña:"));
+        d.setNombre(JOptionPane.showInputDialog(null, "Ingrese su nombre:"));
+        d.setApellidos(JOptionPane.showInputDialog(null, "Ingrese sus apellidos:"));
+        d.setNickname(JOptionPane.showInputDialog(null, "Cree un nombre de usuario:"));
+        d.setPassword(JOptionPane.showInputDialog(null, "Cree una contraseña:"));
         d.setEstado("Activo");
         NodoCregistro nuevo = new NodoCregistro();
         nuevo.setElemento(d);

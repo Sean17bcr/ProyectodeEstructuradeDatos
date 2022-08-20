@@ -26,7 +26,7 @@ public class ColaComentarios {
         d.setNombre(JOptionPane.showInputDialog(null, "Ingrese su nombre: "));
         d.setApellido(JOptionPane.showInputDialog(null, "Ingrese sus apellidos: "));
         d.setCalificacion(Integer.parseInt(JOptionPane.showInputDialog(null, "Del 1 al 10, "
-                + "siendo 1 el más bajo y 10 el más alto, califique su experiencia en Heladeria La Vaquita Feliz:  ")));
+                + "siendo 1 el más bajo y 10 el más alto, califique su experiencia en Healthy Shakes:  ")));
         d.setComentario(JOptionPane.showInputDialog(null, "Comentarios: "));
         NodoComentarios nuevo = new NodoComentarios();
         nuevo.setElemento(d);
@@ -49,9 +49,9 @@ public class ColaComentarios {
                         + "Comentarios: " + aux.getElemento().getComentario() + "--->";
                 aux = aux.getSiguiente();
             }
-            JOptionPane.showMessageDialog(null, "Comentarios realizados por clientes de La Vaquita Feliz:\n" + s);
+            JOptionPane.showMessageDialog(null, "Comentarios realizados por clientes de Healthy Shakes:\n" + s);
         } else {
-            JOptionPane.showMessageDialog(null, "No existen elementos para mostrar, cola completamente vacía!");
+            JOptionPane.showMessageDialog(null, "No existen elementos para mostrar, cola vacía!");
         }
     }
 
