@@ -3,9 +3,8 @@ package Menus;
 import BaseDatos.ColaComentarios;
 import BaseDatos.LDCingredientes;
 import BaseDatos.LESCatalogoClientes;
-import BaseDatos.LESbatidos;
+import BaseDatos.LEShelados;
 import BaseDatos.LSCclientes;
-import BaseDatos.LDCcatalogolibros;
 import com.mycompany.proyectoed.Lista;
 import com.mycompany.proyectoed.Modulo2_Catalog;
 import javax.swing.JOptionPane;
@@ -207,7 +206,7 @@ public class Menus {
 
     public void mostrarMenuBatidos() {
 
-        LESbatidos les = new LESbatidos();
+        LEShelados les = new LEShelados();
         opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "***Menú Batidos***\n\n"
                 + "1. Agregar batido\n"
                 + "2. Editar batido\n"
@@ -244,51 +243,5 @@ public class Menus {
                         "Opción incorrecta!", "Error", JOptionPane.ERROR_MESSAGE);
             }
         }
-    }
-    
-    public void mostarMenuCatalogosdeLibros(){
-     LDCcatalogolibros MC2 = new LDCcatalogolibros();
-     opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "***Menú Librería***\n\n"
-                + "1. Agregar libro\n"
-                + "2. Editar libros\n"
-                + "3. Inactivar libros\n"
-                + "4. Mostrar Libros\n"
-                + "5. Salir del sistema\n"
-                + "Digite su opción:"));
-      switch (opcion) {
-            case 1: {
-                MC2.agregar();
-                mostrarMenuBatidos();
-                break;
-            }
-            case 2: {
-                MC2.Editar();
-                mostrarMenuBatidos();
-                break;
-            }
-            case 3: {
-                MC2.Inactivar();
-                mostrarMenuBatidos();
-                break;
-            }
-            case 4: {
-                MC2.Mostrar();
-                mostrarMenuBatidos();
-                break;
-            }
-            case 5: {
-                break;
-            }
-            default: {
-                JOptionPane.showMessageDialog(null,
-                        "Opción incorrecta!", "Error", JOptionPane.ERROR_MESSAGE);
-            }
-        }
-        
-        
-        
-        
-        
-        
     }
 }
