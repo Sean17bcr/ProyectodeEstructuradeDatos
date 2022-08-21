@@ -34,7 +34,7 @@ public class MenuPadre {
                 break;
             }
             case 4:{
-                MUP.mostrarMenuComentarios();
+                //MUP.mostrarMenuComentarios();
                 mostrarMenu();
                 break;
             }

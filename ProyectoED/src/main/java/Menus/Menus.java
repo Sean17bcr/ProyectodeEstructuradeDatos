@@ -1,12 +1,10 @@
 package Menus;
 
-import BaseDatos.ColaComentarios;
 import BaseDatos.LDCingredientes;
 import BaseDatos.LESCatalogoClientes;
 import BaseDatos.LEShelados;
 import BaseDatos.LSCclientes;
 import com.mycompany.proyectoed.Lista;
-import com.mycompany.proyectoed.Modulo2_Catalog;
 import javax.swing.JOptionPane;
 
 /**
@@ -44,7 +42,7 @@ public class Menus {
                     L.extraerDelInicio();
                     break;
                 case 4:
-                    L.extraerEspecifico();
+                    L.inactivarEspecifico();
                     break;
                 case 5:
                     op = 5;
@@ -136,33 +134,7 @@ public class Menus {
         }
     }
 
-    public void mostrarMenuComentarios() {
-        ColaComentarios les = new ColaComentarios();
-        opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "***Menú Comentarios***\n\n"
-                + "1. Registrar comentario\n"
-                + "2. Mostrar Comentarios\n"
-                + "3. Salir del sistema\n\n"
-                + "Digite su opción:"));
-        switch (opcion) {
-            case 1: {
-                les.encolar();
-                mostrarMenuComentarios();
-                break;
-            }
-            case 2: {
-                les.mostrarElementos();
-                mostrarMenuComentarios();
-                break;
-            }
-            case 3: {
-                break;
-            }
-            default: {
-                JOptionPane.showMessageDialog(null,
-                        "Opción incorrecta!", "Error", JOptionPane.ERROR_MESSAGE);
-            }
-        }
-    }
+    
 
     public void mostrarMenuClientes() {
         LSCclientes les = new LSCclientes();

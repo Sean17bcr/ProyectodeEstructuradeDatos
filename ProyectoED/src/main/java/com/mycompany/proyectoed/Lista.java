@@ -54,7 +54,7 @@ public class Lista {
         }
     }
 
-    public void extraerEspecifico() {
+    public void inactivarEspecifico() {
         if (!esVacia()) {
             String nomUsu = JOptionPane.showInputDialog(null,"Digite el nickname del usuario que desea extraer:");
             
