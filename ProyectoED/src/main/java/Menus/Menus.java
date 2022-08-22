@@ -1,10 +1,11 @@
 package Menus;
 
 import BaseDatos.LDCingredientes;
-import BaseDatos.LESCatalogoClientes;
+import BaseDatos.LDEatalogoEmpleado;
 import BaseDatos.LEShelados;
 import BaseDatos.LSCclientes;
 import com.mycompany.proyectoed.Lista;
+import com.mycompany.proyectoed.frm_Inicio;
 import javax.swing.JOptionPane;
 
 /**
@@ -25,7 +26,7 @@ public class Menus {
                 + "2.Mostrar a las personas agregadas\n"
                 + "3.Extraer primer persona ingresada\n"
                 + "4.Extraer usuario especifico\n"
-                + "5.Salir";
+                + "5.Ver menu principal";
 
         do {
             op = Byte.parseByte(JOptionPane.showInputDialog(null, "Digite la opcion que desea ingresar: \n"
@@ -45,17 +46,21 @@ public class Menus {
                     L.inactivarEspecifico();
                     break;
                 case 5:
-                    op = 5;
+                    frm_Inicio inicio = new frm_Inicio();
+                    inicio.setVisible(true);
+                    inicio.setLocationRelativeTo(null);
+                case 6:
+                    op = 6;
+                    
                 default:
             }
 
-        } while (op
-                != 5);
+        } while (op != 6);
 
     }
 
-    public void mostrarMenuCatalogoClientes() {
-        LESCatalogoClientes les = new LESCatalogoClientes();
+    public void mostrarMenuCatalogoEmpleado() {
+        LDEatalogoEmpleado les = new LDEatalogoEmpleado();
         opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "***Menú Catalogo de Clientes***\n\n"
                 + "1. Agregar categoría de clientes\n"
                 + "2. Editar categoría de clientes\n"
@@ -66,25 +71,29 @@ public class Menus {
         switch (opcion) {
             case 1: {
                 les.agregar();
-                mostrarMenuCatalogoClientes();
+                mostrarMenuCatalogoEmpleado();
                 break;
             }
             case 2: {
-                les.editar();
-                mostrarMenuCatalogoClientes();
+                les.editarID();
+                mostrarMenuCatalogoEmpleado();
                 break;
             }
             case 3: {
-                les.inactivar();
-                mostrarMenuCatalogoClientes();
+                //les.inactivar();
+                mostrarMenuCatalogoEmpleado();
                 break;
             }
             case 4: {
                 les.mostrarElementos();
-                mostrarMenuCatalogoClientes();
+                mostrarMenuCatalogoEmpleado();
                 break;
             }
             case 5: {
+                frm_Inicio inicio = new frm_Inicio();
+                inicio.setVisible(true);
+                inicio.setLocationRelativeTo(null);
+
                 break;
             }
             default: {
@@ -94,37 +103,35 @@ public class Menus {
         }
     }
 
-    public void mostrarMenu() {
+    public void mostrarMenuIngredientes() {
         LDCingredientes les = new LDCingredientes();
         opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "***Menú Clientes***\n\n"
                 + "1. Agregar Ingrediente\n"
                 + "2. Editar Ingrediente\n"
-                + "3. Inactivar ingrediente\n"
-                + "4. Mostrar Ingredientes\n"
-                + "5. Salir del sistema\n\n"
+                //+ "3. Inactivar ingrediente\n"
+                + "3. Mostrar Ingredientes\n"
+                + "4. Salir del sistema\n\n"
                 + "Digite su opción:"));
         switch (opcion) {
             case 1: {
                 les.agregarDC();
-                mostrarMenu();
+                mostrarMenuIngredientes();
                 break;
             }
             case 2: {
                 les.editar();
-                mostrarMenu();
+                mostrarMenuIngredientes();
                 break;
             }
             case 3: {
-                les.inactivar();
-                mostrarMenu();
+                les.mostrarElementos();
+                mostrarMenuIngredientes();
                 break;
             }
             case 4: {
-                les.mostrarElementos();
-                mostrarMenu();
-                break;
-            }
-            case 5: {
+                frm_Inicio inicio = new frm_Inicio();
+                inicio.setVisible(true);
+                inicio.setLocationRelativeTo(null);
                 break;
             }
             default: {
@@ -133,40 +140,41 @@ public class Menus {
             }
         }
     }
-
-    
 
     public void mostrarMenuClientes() {
         LSCclientes les = new LSCclientes();
         opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "***Menú Clientes***\n\n"
                 + "1. Agregar Cliente\n"
                 + "2. Editar\n"
-                + "3. Inactivar cliente\n"
-                + "4. Mostrar Clientes\n"
+                + "3. Inactivar Cuenta del Cliente\n"
+                + "4. Mostrar todos los Clientes\n"
                 + "5. Salir del sistema\n\n"
                 + "Digite su opción:"));
         switch (opcion) {
             case 1: {
                 les.agregar();
-                mostrarMenu();
+                mostrarMenuClientes();
                 break;
             }
             case 2: {
                 les.editar();
-                mostrarMenu();
+                mostrarMenuClientes();
                 break;
             }
             case 3: {
                 les.inactivar();
-                mostrarMenu();
+                mostrarMenuClientes();
                 break;
             }
             case 4: {
                 les.mostrarElementos();
-                mostrarMenu();
+                mostrarMenuClientes();
                 break;
             }
             case 5: {
+                frm_Inicio inicio = new frm_Inicio();
+                inicio.setVisible(true);
+                inicio.setLocationRelativeTo(null);
                 break;
             }
             default: {
@@ -176,43 +184,43 @@ public class Menus {
         }
     }
 
-    public void mostrarMenuBatidos() {
+    public void mostrarMenuHelados() {
 
         LEShelados les = new LEShelados();
         opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "***Menú Batidos***\n\n"
-                + "1. Agregar batido\n"
-                + "2. Editar batido\n"
-                + "3. Inactivar batido\n"
-                + "4. Mostrar batidos\n"
-                + "5. Salir del sistema\n\n"
+                + "1. Agregar helado\n"
+                + "2. Editar helado\n"
+                + "3. Mostrar batidos\n"
+                + "4. Salir del sistema\n\n"
                 + "Digite su opción:"));
         switch (opcion) {
             case 1: {
                 les.agregar();
-                mostrarMenuBatidos();
+                mostrarMenuHelados();
                 break;
             }
             case 2: {
                 les.editar();
-                mostrarMenuBatidos();
+                mostrarMenuHelados();
                 break;
             }
             case 3: {
-                les.inactivar();
-                mostrarMenuBatidos();
+                les.mostrarElementos();
+                mostrarMenuHelados();
+                //les.inactivar();
+                //mostrarMenuHelados();
                 break;
             }
             case 4: {
-                les.mostrarElementos();
-                mostrarMenuBatidos();
+                frm_Inicio inicio = new frm_Inicio();
+                inicio.setVisible(true);
+                inicio.setLocationRelativeTo(null);
                 break;
             }
-            case 5: {
-                break;
-            }
+
             default: {
                 JOptionPane.showMessageDialog(null,
-                        "Opción incorrecta!", "Error", JOptionPane.ERROR_MESSAGE);
+                        "Opción incorrecta", "Error", JOptionPane.ERROR_MESSAGE);
             }
         }
     }

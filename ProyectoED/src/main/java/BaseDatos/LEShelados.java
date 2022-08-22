@@ -83,28 +83,6 @@ public class LEShelados {
         }
     }
 
-    public void inactivar() {
-        String helado = "";
-        helado = JOptionPane.showInputDialog(null, "Ingrese el ID del helado que desea inactivar: ");
-        NodoLESHelado aux = inicio;
-        boolean encontrado = false;
-        if (!esVaciaLES()) {
-            while (!encontrado && aux != null) {
-                if (helado.equals(aux.getElemento().getHelado())) {
-                    encontrado = true;
-                    aux.getElemento().setEstado("Inactivo");
-                    JOptionPane.showMessageDialog(null, "Sea ha inactivado el helado");
-                }
-                aux = aux.getSiguiente();
-            }
-            if (encontrado == false) {
-                JOptionPane.showMessageDialog(null, "El helado no se encuentra registrado");
-            }
-        } else {
-            JOptionPane.showMessageDialog(null, "No hay helados registrados");
-        }
-    }
-
     public void mostrarElementos() {
         if (!esVaciaLES()) {
             String s = "";

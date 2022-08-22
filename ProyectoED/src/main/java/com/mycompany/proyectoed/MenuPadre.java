@@ -24,12 +24,12 @@ public class MenuPadre {
                 break;
             }
             case 2:{
-                MUP.mostrarMenuCatalogoClientes();
+                MUP.mostrarMenuCatalogoEmpleado();
                 mostrarMenu();
                 break;
             }
             case 3:{
-                MUP.mostrarMenu();
+                MUP.mostrarMenuIngredientes();
                 mostrarMenu();
                 break;
             }
@@ -44,7 +44,7 @@ public class MenuPadre {
                 break;
             }
             case 6:{
-                MUP.mostrarMenuBatidos();
+                MUP.mostrarMenuHelados();
                 break;
             }
             case 7:{

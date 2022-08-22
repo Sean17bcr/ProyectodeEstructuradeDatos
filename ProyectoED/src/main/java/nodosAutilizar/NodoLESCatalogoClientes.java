@@ -1,19 +1,19 @@
 package nodosAutilizar;
-import Informacion.DatoCatalogoClientes;
+import Informacion.Empleados;
 public class NodoLESCatalogoClientes {
     
-    private DatoCatalogoClientes elemento;
+    private Empleados elemento;
     private NodoLESCatalogoClientes siguiente;
 
     public NodoLESCatalogoClientes() {
         this.siguiente = null;
     }
 
-    public DatoCatalogoClientes getElemento() {
+    public Empleados getElemento() {
         return elemento;
     }
 
-    public void setElemento(DatoCatalogoClientes elemento) {
+    public void setElemento(Empleados elemento) {
         this.elemento = elemento;
     }
 
