@@ -69,6 +69,7 @@ public class frm_Inicio extends javax.swing.JFrame {
         btn_Catalogos.setBackground(new java.awt.Color(255, 255, 255));
         btn_Catalogos.setForeground(new java.awt.Color(255, 255, 255));
         btn_Catalogos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/contents/IMG_Catalogos.jpg"))); // NOI18N
+        btn_Catalogos.setBorderPainted(false);
         btn_Catalogos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_CatalogosActionPerformed(evt);
@@ -78,6 +79,7 @@ public class frm_Inicio extends javax.swing.JFrame {
         btn_Cajas.setBackground(new java.awt.Color(255, 255, 255));
         btn_Cajas.setForeground(new java.awt.Color(255, 255, 255));
         btn_Cajas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/contents/IMG_Cajas.jpg"))); // NOI18N
+        btn_Cajas.setBorderPainted(false);
         btn_Cajas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_CajasActionPerformed(evt);
@@ -178,7 +180,10 @@ public class frm_Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_CatalogosActionPerformed
 
     private void btn_CajasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CajasActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        this.dispose();
+        menus.mostrarMenuVentas();
+        
     }//GEN-LAST:event_btn_CajasActionPerformed
 
     private void btn_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SalirActionPerformed
