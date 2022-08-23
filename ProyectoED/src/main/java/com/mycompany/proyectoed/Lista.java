@@ -15,7 +15,7 @@ public class Lista {
 
     public void agregar() {
         Persona persona = new Persona();
-        //se le piden los datos a las personas
+        // aca se le piden los datos a las personas
         persona.setNombre(JOptionPane.showInputDialog(null, "Digite el nombre: "));
         persona.setApellido1(JOptionPane.showInputDialog(null, "Digite el primer apellido del usuario: "));
         persona.setApellido2(JOptionPane.showInputDialog(null, "Digite el segundo apellido del usuario: "));
