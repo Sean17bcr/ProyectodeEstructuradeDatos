@@ -22,7 +22,7 @@ public class LEShelados {
         String batido = "";
         DatoHelado b = new DatoHelado();
         boolean encontrado = false;
-        batido = (JOptionPane.showInputDialog(null, "Ingrese el ID del batido: "));
+        batido = (JOptionPane.showInputDialog(null, "Ingrese el ID del Helado: "));
             NodoLESHelado aux = inicio;
             while (!encontrado && aux != null) {
                 if (batido.equals(aux.getElemento().getHelado())) {
@@ -53,7 +53,7 @@ public class LEShelados {
                     aux2.setSiguiente(nuevo);
                 }
             } else {
-                JOptionPane.showMessageDialog(null, "Este batido ya se encuentra registrado, por favor ingrese otro ID");
+                JOptionPane.showMessageDialog(null, "Este Helado ya se encuentra registrado, por favor ingrese otro ID");
             }
         }
     
@@ -95,7 +95,7 @@ public class LEShelados {
             }
             JOptionPane.showMessageDialog(null, "La lista contiene:\n" + s);
         } else {
-            JOptionPane.showMessageDialog(null, "La está vacía!");
+            JOptionPane.showMessageDialog(null, "La lista se encuentra vacía!");
         }
     }
 

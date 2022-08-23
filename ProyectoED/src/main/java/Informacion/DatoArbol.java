@@ -3,7 +3,7 @@ public class DatoArbol {
 
     private String nombre;
     private String fecha;
-    private String batido;
+    private String helado;
     private Double valor;
     private Double cantidad;
     private Double total;
@@ -12,7 +12,7 @@ public class DatoArbol {
     public DatoArbol() {
         this.nombre = "";
         this.fecha = "";
-        this.batido = "";
+        this.helado = "";
         this.valor = 300.0;
         this.cantidad = 0.0;
         this.total = 0.0;
@@ -37,11 +37,11 @@ public class DatoArbol {
     }
 
     public String getBatido() {
-        return batido;
+        return helado;
     }
 
-    public void setBatido(String batido) {
-        this.batido = batido;
+    public void setBatido(String helado) {
+        this.helado = helado;
     }
 
     public Double getValor() {
