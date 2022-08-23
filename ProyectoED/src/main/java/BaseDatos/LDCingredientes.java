@@ -42,7 +42,7 @@ public class LDCingredientes {
                     "Escriba la descripción del ingrediente: "));
             dc.setCantidad(Integer.parseInt(JOptionPane.showInputDialog(null,
                     "Escriba la cantidad: ")));
-            dc.setEstado(JOptionPane.showInputDialog(null, "Ingrese el estado del batido: "));
+            dc.setEstado(JOptionPane.showInputDialog(null, "Ingrese el estado del Helado: "));
             NodoDCingredientes nuevo = new NodoDCingredientes();
             nuevo.setElemento(dc);
             if (esVaciaDC()) {

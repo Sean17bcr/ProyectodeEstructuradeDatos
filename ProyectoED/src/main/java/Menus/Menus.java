@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Sean
+ * @author Sean, Valeria y Sebastian
  */
 public class Menus {
 
