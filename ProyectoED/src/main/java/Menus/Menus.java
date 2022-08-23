@@ -136,15 +136,18 @@ public class Menus {
         switch (opcion) {
             case 1: {
                 arbolVentas.crearRaiz();
+                mostrarMenuVentas();
                 break;
             }
             case 2: {
                 arbolVentas.crearRaiz();
                 arbolVentas.modificar();
+                mostrarMenuVentas();
                 break;
             }
             case 3: {
                 arbolVentas.mostrar();
+                mostrarMenuVentas();
                 break;
             }
             case 4: {
